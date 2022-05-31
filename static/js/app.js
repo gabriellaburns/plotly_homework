@@ -107,7 +107,7 @@ d3.json("static/samples.json").then(data => {
             }
         };
 
-        //PLOT!!!
+        //plots plots plots plots plots plots 
 
         Plotly.newPlot("bar", [barT], barL, config);
 
@@ -145,7 +145,7 @@ d3.json("static/samples.json").then(data => {
             }
         };
 
-        //PLOT!!!!!
+        // more plots!
         Plotly.newPlot("bubble", [bubbleT], bubbleL, config);
 
         // Link with Guage
@@ -160,14 +160,14 @@ d3.json("static/samples.json").then(data => {
             type: "indicator",
             mode: "gauge",
             value: washes,
-            color: " #E5E0FF",
+            color: " #34568B",
             title: {
                 text: "Wash Belly Button <br> Frequency"
             },
             gauge: {
                 bar: {
                     thickness: 0.45,
-                    color: "#E0FFF6"
+                    color: "#34568B"
                 },
                 axis: {
                     range: [null, 12],
@@ -188,7 +188,7 @@ d3.json("static/samples.json").then(data => {
             }
         }
 
-        //PLOT!!!!
+        //Plot it real good!
         Plotly.newPlot("gauge", [gaugeT], gaugeL, config)
 
 
