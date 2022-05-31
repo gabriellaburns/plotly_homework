@@ -48,29 +48,29 @@ d3.json("static/samples.json").then(data => {
         // Select METADATE VARIABLES FOR OUTPUT
 
         let meta_data = data["metadata"].filter(item => (item["id"] === parseInt(id)))[0];
-        let ethnic = meta_data["ethnicity"];
-        let sex = meta_data["gender"];
-        let location = meta_data["location"];
+        let ethnicity = meta_data["ethnicity"];
+        let gender = meta_data["gender"];
+        let place = meta_data["location"];
         let age = meta_data["age"];
         let washes = meta_data["wfreq"]
 
-        console.log(ethnic);
-        console.log(sex);
-        console.log(location);
+        console.log(ethnicity);
+        console.log(gender);
+        console.log(place);
 
         // create data and format for the output of the meta-data section in the index
 
         // link the sections and remove anything that is in the section everytime ID changes
-        let person_data = d3.select("#sample-metadata");
+        let people = d3.select("#sample-metadata");
 
-        person_data.selectAll("*").remove();
+        people.selectAll("*").remove();
 
         // add the values to each parragraph
 
-        person_data.append("p").text("Ethnicity: " + ethnic);
-        person_data.append("p").text("Gender: " + sex);
-        person_data.append("p").text("Location: " + location);
-        person_data.append("p").text("Age: " + age);
+        people.append("p").text("Ethnicity: " + ethnicity);
+        people.append("p").text("Gender: " + gender);
+        people.append("p").text("Location: " + place);
+        people.append("p").text("Age: " + age);
 
         // Define and link the bar chart
 
@@ -113,10 +113,10 @@ d3.json("static/samples.json").then(data => {
 
         // Define and link the bubble chart
 
-        let bubblechart = d3.select("#bubble")
+        let bubbles = d3.select("#bubble")
 
         // clean data so that a new chart shows everytime id gets changed.
-        bubblechart.selectAll("*").remove();
+        bubbles.selectAll("*").remove();
 
         // create trace and layout for bubble chart.
         let bubbleT = {
