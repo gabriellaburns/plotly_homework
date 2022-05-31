@@ -141,7 +141,7 @@ d3.json("static/samples.json").then(data => {
                 title: "Sample Values"
             },
             font: {
-                color: "#735178"
+                color: "#edd482"
             }
         };
 
